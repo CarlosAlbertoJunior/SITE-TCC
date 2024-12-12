@@ -14,46 +14,9 @@
     margin: 0;
   }
   
-  /* Estilo do Navbar */
-  nav {
-    background-color: #007bff; /* Azul forte */
-    color: #ffffff; /* Texto branco */
-    padding: 10px 20px;
-  }
   
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
   
-  nav ul li {
-    display: inline;
-  }
   
-  nav ul li a {
-    color: #ffffff; /* Links em branco */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #0056b3; /* Azul mais escuro */
-    transition: background-color 0.3s;
-  }
-  
-  /* Estilo do footer */
-  footer {
-    background-color: #007bff; /* Azul */
-    color: #ffffff; /* Texto branco */
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
   
   /* Estilo das seções */
   section {
@@ -66,11 +29,20 @@
   }
   
   /* Títulos */
-  h1 {
+  .texto-inicio h1  {
     color: #007bff; /* Azul */
     margin-bottom: 15px;
     text-align: center;
   }
+  .texto-inicio p {
+    text-align: center;
+  }
+  .imagem-inicio img {
+    width: 1200px;
+    height: auto;
+    text-align: center;
+  }
+  
   
   h2, h3 {
     color: #0056b3; /* Azul mais escuro */

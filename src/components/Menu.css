@@ -1,0 +1,29 @@
+/* Estilo do Navbar */
+nav {
+    background-color: #007bff; /* Azul forte */
+    color: #ffffff; /* Texto branco */
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #ffffff; /* Links em branco */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    transition: background-color 0.3s;
+  }
