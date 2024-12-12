@@ -1,5 +1,5 @@
 import React from "react";
-import "./prefeitura.css"
+import "./Prefeitura.css"
 
 const Prefeitura = () => {
   return (
