@@ -1,20 +1,14 @@
 import React from "react";
+import "./Contato.css"
 
 const Contato = () => {
   return (
-    <section>
-      <h1>Entre em Contato</h1>
-      <form>
-        <label>
-          Nome:
-          <input type="text" name="nome" />
-        </label>
-        <label>
-          Mensagem:
-          <textarea name="mensagem"></textarea>
-        </label>
-        <button type="submit">Enviar</button>
-      </form>
+    <section className="contato">
+      <div className="contato-texto">
+      <h1>Links</h1>
+      <p>Todos os links das informações Obtidas.</p>
+      </div>
+     
     </section>
   );
 };

@@ -1,0 +1,10 @@
+.prefeitura-texto h1 {
+    color: #007bff;
+    /* Azul */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.prefeitura-texto p {
+    text-align: center;
+}
