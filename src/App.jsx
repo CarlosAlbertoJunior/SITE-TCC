@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Vereadores from "./pages/Vereadores";
 import Prefeitura from "./pages/Prefeitura";
 import Forum from "./pages/Forum";
-import Contato from "./pages/Contato";
+import Quemsomos from "./pages/Quemsomos";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/vereadores" element={<Vereadores />} />
           <Route path="/prefeitura" element={<Prefeitura />} />
           <Route path="/forum" element={<Forum />} />
-          <Route path="/contato" element={<Contato />} />
+          <Route path="/quemsomos" element={<Quemsomos />} />
         </Routes>
       </main>
       <Footer />

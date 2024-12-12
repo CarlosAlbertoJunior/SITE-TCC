@@ -8,14 +8,21 @@ const Forum = () => {
   const [reply, setReply] = useState("");
   const [opinions, setOpinions] = useState([
     {
-      user: "Pedro",
+      user: "João",
       title: "Fórum incrível",
       text: "Adorei a ideia do fórum! Muito bom poder expressar minha opinião.",
-      replies: [],
-      isReplying: false, // Estado para controle da exibição do campo de resposta
+      replies: [
+        {
+          user: "Maria",
+          text: "Concordo, ótimo fórum!",
+          likes: 3,
+          likedBy: [], // Array de usuários que curtiram
+        }
+      ],
+      isReplying: false,
     },
     {
-      user: "Cloud",
+      user: "Maria",
       title: "Apoio total",
       text: "Excelente iniciativa, é importante dar voz às pessoas.",
       replies: [],
@@ -56,7 +63,7 @@ const Forum = () => {
   const handleSendReply = (index) => {
     if (reply.trim() !== "") {
       const newOpinions = [...opinions];
-      newOpinions[index].replies.push({ user: name, text: reply });
+      newOpinions[index].replies.push({ user: name, text: reply, likes: 0, likedBy: [] });
       setOpinions(newOpinions);
       setReply(""); // Limpa o campo de resposta
     } else {
@@ -64,10 +71,34 @@ const Forum = () => {
     }
   };
 
+  const handleDeleteReply = (opIndex, replyIndex) => {
+    if (opinions[opIndex].replies[replyIndex].user === name) {
+      const newOpinions = [...opinions];
+      newOpinions[opIndex].replies.splice(replyIndex, 1);
+      setOpinions(newOpinions);
+    } else {
+      alert("Você só pode apagar suas próprias respostas.");
+    }
+  };
+
   const handleToggleReply = (index) => {
     const newOpinions = [...opinions];
-    newOpinions[index].isReplying = !newOpinions[index].isReplying; // Alterna a visibilidade do campo de resposta
+    newOpinions[index].isReplying = !newOpinions[index].isReplying;
     setOpinions(newOpinions);
+  };
+
+  const handleLikeReply = (opIndex, replyIndex) => {
+    const newOpinions = [...opinions];
+    const reply = newOpinions[opIndex].replies[replyIndex];
+
+    // Verifica se o usuário já curtiu a resposta
+    if (!reply.likedBy.includes(name)) {
+      reply.likedBy.push(name); // Adiciona o nome do usuário que curtiu
+      reply.likes += 1; // Incrementa o contador de curtidas
+      setOpinions(newOpinions);
+    } else {
+      alert("Você já curtiu esta resposta.");
+    }
   };
 
   return (
@@ -99,8 +130,8 @@ const Forum = () => {
         </div>
 
         <div className="opinions">
-          {opinions.map((op, index) => (
-            <div className="opinion" key={index}>
+          {opinions.map((op, opIndex) => (
+            <div className="opinion" key={opIndex}>
               <strong>{op.user} - {op.title}:</strong> {op.text}
 
               {/* Exibir respostas */}
@@ -108,19 +139,35 @@ const Forum = () => {
                 {op.replies.map((reply, replyIndex) => (
                   <div className="reply" key={replyIndex}>
                     <strong>{reply.user}:</strong> {reply.text}
+
+                    {/* Botão de curtir */}
+                    <button
+                      onClick={() => handleLikeReply(opIndex, replyIndex)}
+                      className="like-btn"
+                    >
+                      Curtir ({reply.likes})
+                    </button>
+
+                    {/* Exibir o botão de excluir apenas para o autor da resposta */}
+                    {reply.user === name && (
+                      <button
+                        onClick={() => handleDeleteReply(opIndex, replyIndex)}
+                        className="delete-reply-btn"
+                      >
+                        Apagar
+                      </button>
+                    )}
                   </div>
                 ))}
               </div>
 
-              {/* Botão para exibir o campo de resposta */}
               <button
                 className="reply-btn"
-                onClick={() => handleToggleReply(index)}
+                onClick={() => handleToggleReply(opIndex)}
               >
                 Responder
               </button>
 
-              {/* Campo de resposta, visível apenas quando isReplying for true */}
               {op.isReplying && (
                 <div className="reply-input-container">
                   <textarea
@@ -130,7 +177,7 @@ const Forum = () => {
                     onChange={handleReplyChange}
                   ></textarea>
                   <button
-                    onClick={() => handleSendReply(index)}
+                    onClick={() => handleSendReply(opIndex)}
                     className="send-reply-btn"
                   >
                     Enviar Resposta

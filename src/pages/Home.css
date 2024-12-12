@@ -23,16 +23,17 @@
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+  h1 {
+    font-size: 20px;
+    color: #000000;
+  }
+  p {
+    font-size: 15px;
+    color: #000000;
+  }
   
   /* Títulos */
-  .texto-home h1  {
-    color: #007bff; /* Azul */
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  .texto-home p {
-    text-align: center;
-  }
+
   .imagem-home img {
     width: 1200px;
     height: auto;
@@ -42,7 +43,7 @@
 
   
   button:hover {
-    background-color: #0056b3; /* Azul mais escuro */
+    background-color: #000000; /* Azul mais escuro */
     transition: background-color 0.3s;
   }
   

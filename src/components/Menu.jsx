@@ -10,7 +10,7 @@ const Menu = () => {
         <li><Link to="/vereadores">Vereadores</Link></li>
         <li><Link to="/prefeitura">Prefeitura</Link></li>
         <li><Link to="/forum">Fórum</Link></li>
-        <li><Link to="/contato">Contato</Link></li>
+        <li><Link to="/quemsomos">Quem somos</Link></li>
       </ul>
     </nav>
   );

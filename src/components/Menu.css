@@ -1,6 +1,6 @@
 /* Estilo do Navbar */
 nav {
-    background-color: #007bff; /* Azul forte */
+    background-color: #0e6672; /* Azul forte */
     color: #ffffff; /* Texto branco */
     padding: 10px 20px;
   }
@@ -24,6 +24,6 @@ nav {
   }
   
   nav ul li a:hover {
-    background-color: #0056b3; /* Azul mais escuro */
+    background-color: #3f3f3f; /* Azul mais escuro */
     transition: background-color 0.3s;
   }
