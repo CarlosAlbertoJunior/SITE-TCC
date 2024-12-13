@@ -22,7 +22,7 @@ const Home = () => {
             </section>
             <section className='texto'>
                 <div className="texto-home">
-                    Bem-vindo ao <b>Tê de Olho</b>, o seu portal de transparência e fiscalização da gestão pública. Nosso objetivo é proporcionar à população acesso fácil e claro a informações essenciais sobre as ações dos vereadores, os gastos da prefeitura e a utilização dos recursos públicos.
+                    Bem-vindo ao <b>Tô de Olho</b>, o seu portal de transparência e fiscalização da gestão pública. Nosso objetivo é proporcionar à população acesso fácil e claro a informações essenciais sobre as ações dos vereadores, os gastos da prefeitura e a utilização dos recursos públicos.
 
                     Aqui você encontrará dados atualizados sobre o desempenho dos vereadores na Câmara Municipal, acompanhando de perto suas atividades, propostas e decisões. Além disso, disponibilizamos informações detalhadas sobre as despesas da prefeitura, incluindo viagens oficiais, contratos firmados e muito mais.
 
