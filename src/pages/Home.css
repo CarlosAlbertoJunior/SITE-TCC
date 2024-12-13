@@ -9,7 +9,7 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #ffffff; /* Fundo branco */
-  color: #333333; /* Texto em tom neutro */
+  color: #000000; /* Texto em tom neutro */
   padding: 0;
   margin: 0;
 }
@@ -33,20 +33,18 @@ p {
   font-size: 15px;
   color: #000000;
 }
-
-/* Imagem da home */
-.imagem-home img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+.texto-home {
+  text-align: justify;
+  font-size: 25px;
+  color: #000000;
+  
 }
 
 /* Botões */
 button {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff; /* Cor azul */
+  background-color: #0e6672; /* Cor azul */
   color: #ffffff;
   cursor: pointer;
   font-size: 14px;
@@ -54,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Azul mais escuro */
+  background-color: #0e6672; /* Azul mais escuro */
   transition: background-color 0.3s;
 }
 
