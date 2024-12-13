@@ -130,14 +130,14 @@ const Forum = () => {
   };
 
   return (
+    
     <section className="forum">
       <div className="forum-texto">
         <h1>Fórum de Discussão</h1>
         <p>Participe dos debates e compartilhe sua opinião!</p>
       </div>
-
-      {/* Exibir mensagens enviadas na parte superior */}
-      <div className="opinions">
+        {/* Exibir mensagens enviadas na parte superior */}
+        <div className="opinions">
         {opinions.map((op, opIndex) => (
           <div className="opinion" key={opIndex}>
             <strong>{op.user} - {op.title}:</strong> {op.text}
@@ -224,6 +224,7 @@ const Forum = () => {
         </div>
       </div>
     </section>
+
   );
 };
 
