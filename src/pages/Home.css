@@ -1,56 +1,162 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #ffffff; /* Fundo branco */
-    color: #333333; /* Texto em tom neutro */
-    padding: 0;
-    margin: 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Estilo das seções */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* Fundo branco */
+  color: #333333; /* Texto em tom neutro */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo das seções */
+section {
+  padding: 20px;
+  max-width: 1250px;
+  margin: 20px auto;
+  background: #f8f9fa; /* Fundo cinza claro */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 20px;
+  color: #000000;
+}
+
+p {
+  font-size: 15px;
+  color: #000000;
+}
+
+/* Imagem da home */
+.imagem-home img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff; /* Cor azul */
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+  transition: background-color 0.3s;
+}
+
+/* Estilos Responsivos */
+
+/* Para telas grandes, como desktops e tablets em modo paisagem */
+@media (max-width: 1200px) {
   section {
-    padding: 20px;
-    max-width: 1250px;
-    margin: 20px auto;
-    background: #f8f9fa; /* Fundo cinza claro */
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
-  h1 {
-    font-size: 20px;
-    color: #000000;
-  }
-  p {
-    font-size: 15px;
-    color: #000000;
-  }
-  
-  /* Títulos */
 
-  .imagem-home img {
-    width: 1200px;
-    height: auto;
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Para tablets em modo retrato ou telas menores */
+@media (max-width: 768px) {
+  section {
+    padding: 10px;
+    margin: 5px auto;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  /* Ajuste da imagem */
+  .imagem-home video {
+    width: 100%;
+  }
+
+  /* Botões */
+  button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 480px) {
+  section {
+    padding: 10px;
+    margin: 5px 10px;
+  }
+
+  h1 {
+    font-size: 14px;
     text-align: center;
   }
-  /* Botões */
 
-  
-  button:hover {
-    background-color: #000000; /* Azul mais escuro */
-    transition: background-color 0.3s;
+  p {
+    font-size: 12px;
+    text-align: center;
   }
-  
-  
 
-  
- 
-  
+  /* Ajuste da imagem */
+  .imagem-home video {
+    width: 100%;
+    max-width: 100%;
+  }
 
-  
+  /* Botões */
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+    width: 100%; /* Botão ocupa toda a largura em telas pequenas */
+    margin-bottom: 10px;
+  }
+
+  /* Ajustes para inputs e textareas */
+  .input-container input,
+  .input-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  /* Ajuste das mensagens */
+  .opinions {
+    padding: 10px;
+  }
+
+  .opinion,
+  .reply {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  /* Ajuste dos botões de resposta */
+  .reply-btn,
+  .send-reply-btn {
+    width: 100%; /* Botões ocupando toda a largura */
+    padding: 10px;
+  }
+}

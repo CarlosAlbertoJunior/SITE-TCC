@@ -1,29 +1,93 @@
-/* Estilo do Navbar */
-nav {
-    background-color: #0e6672; /* Azul forte */
-    color: #ffffff; /* Texto branco */
-    padding: 10px 20px;
+/* Estilos para o menu desktop */
+nav .desktop-menu {
+  background-color: #0e6672;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+}
+
+nav .desktop-menu li {
+  display: inline;
+}
+
+nav .desktop-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+nav .desktop-menu li a:hover {
+  background-color: #3f3f3f;
+  transition: background-color 0.3s;
+}
+
+/* Estilos para o menu móvel */
+nav .mobile-menu {
+  display: none; /* Inicialmente o menu mobile está escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo semitransparente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav .mobile-menu li {
+  margin: 20px 0;
+}
+
+nav .mobile-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Exibe o menu mobile quando a classe "active" é adicionada */
+nav .mobile-menu.active {
+  display: flex;
+}
+
+/* Estilos do botão de menu para mobile */
+.menu-toggle {
+  display: none; /* Esconde o botão por padrão em telas grandes */
+  background-color: #3f3f3f;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Exibe o botão do menu mobile em telas pequenas */
+@media (max-width: 768px) {
+  nav ul.desktop-menu {
+    display: none;
   }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+
+  .menu-toggle {
+    display: block; /* Exibe o botão de menu em telas pequenas */
   }
-  
-  nav ul li {
-    display: inline;
+
+  .mobile-menu {
+    display: none; /* Esconde o menu mobile por padrão */
   }
-  
-  nav ul li a {
-    color: #ffffff; /* Links em branco */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
+
+  .mobile-menu.active {
+    display: flex; /* Exibe o menu mobile quando ativo */
   }
-  
-  nav ul li a:hover {
-    background-color: #3f3f3f; /* Azul mais escuro */
-    transition: background-color 0.3s;
-  }
+}
