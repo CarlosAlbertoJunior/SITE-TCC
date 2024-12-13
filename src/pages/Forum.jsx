@@ -130,100 +130,104 @@ const Forum = () => {
   };
 
   return (
-    
-    <section className="forum">
+    <body>
+      <section>
       <div className="forum-texto">
-        <h1>Fórum de Discussão</h1>
-        <p>Participe dos debates e compartilhe sua opinião!</p>
-      </div>
+          <h1>Fórum de Discussão</h1>
+          <p>Participe dos debates e compartilhe sua opinião!</p>
+        </div>
+
+      </section>
+      <section className="forum">
         {/* Exibir mensagens enviadas na parte superior */}
         <div className="opinions">
-        {opinions.map((op, opIndex) => (
-          <div className="opinion" key={opIndex}>
-            <strong>{op.user} - {op.title}:</strong> {op.text}
+          {opinions.map((op, opIndex) => (
+            <div className="opinion" key={opIndex}>
+              <strong>{op.user} - {op.title}:</strong> {op.text}
 
-            <div className="replies">
-              {op.replies.map((reply, replyIndex) => (
-                <div className="reply" key={replyIndex}>
-                  <strong>{reply.user}:</strong> {reply.text}
-                  <button
-                    onClick={() => handleLikeReply(opIndex, replyIndex)}
-                    className="like-btn"
-                  >
-                    Curtir ({reply.likes})
-                  </button>
-                  {reply.user === name && (
+              <div className="replies">
+                {op.replies.map((reply, replyIndex) => (
+                  <div className="reply" key={replyIndex}>
+                    <strong>{reply.user}:</strong> {reply.text}
                     <button
-                      onClick={() => handleDeleteReply(opIndex, replyIndex)}
-                      className="delete-reply-btn"
+                      onClick={() => handleLikeReply(opIndex, replyIndex)}
+                      className="like-btn"
                     >
-                      Apagar
+                      Curtir ({reply.likes})
                     </button>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <button
-              className="reply-btn"
-              onClick={() => handleToggleReply(opIndex)}
-            >
-              Responder
-            </button>
-
-            {op.isReplying && (
-              <div className="reply-input-container">
-                <textarea
-                  className="reply-input"
-                  placeholder="Responda esta opinião..."
-                  value={reply}
-                  onChange={handleReplyChange}
-                ></textarea>
-                <button
-                  onClick={() => handleSendReply(opIndex)}
-                  className="send-reply-btn"
-                >
-                  Enviar Resposta
-                </button>
+                    {reply.user === name && (
+                      <button
+                        onClick={() => handleDeleteReply(opIndex, replyIndex)}
+                        className="delete-reply-btn"
+                      >
+                        Apagar
+                      </button>
+                    )}
+                  </div>
+                ))}
               </div>
-            )}
-          </div>
-        ))}
-      </div>
 
-      {/* Formulário de envio na parte inferior */}
-      <div className="forum-box">
-        <div className="input-container">
-          <input
-            type="text"
-            className="name-input"
-            placeholder="Digite seu nome"
-            value={name}
-            onChange={handleNameChange}
-          />
+              <button
+                className="reply-btn"
+                onClick={() => handleToggleReply(opIndex)}
+              >
+                Responder
+              </button>
+
+              {op.isReplying && (
+                <div className="reply-input-container">
+                  <textarea
+                    className="reply-input"
+                    placeholder="Responda esta opinião..."
+                    value={reply}
+                    onChange={handleReplyChange}
+                  ></textarea>
+                  <button
+                    onClick={() => handleSendReply(opIndex)}
+                    className="send-reply-btn"
+                  >
+                    Enviar Resposta
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-        <div className="input-container">
-          <input
-            type="text"
-            className="title-input"
-            placeholder="Título do assunto"
-            value={title}
-            onChange={handleTitleChange}
-          />
+
+        {/* Formulário de envio na parte inferior */}
+        <div className="forum-box">
+          <div className="input-container">
+            <input
+              type="text"
+              className="name-input"
+              placeholder="Digite seu nome"
+              value={name}
+              onChange={handleNameChange}
+            />
+          </div>
+          <div className="input-container">
+            <input
+              type="text"
+              className="title-input"
+              placeholder="Título do assunto"
+              value={title}
+              onChange={handleTitleChange}
+            />
+          </div>
+          <div className="input-container">
+            <textarea
+              className="opinion-input"
+              placeholder="Deixe sua opinião..."
+              value={opinion}
+              onChange={handleInputChange}
+            ></textarea>
+            <button onClick={handleSendOpinion} className="send-btn">
+              Enviar
+            </button>
+          </div>
         </div>
-        <div className="input-container">
-          <textarea
-            className="opinion-input"
-            placeholder="Deixe sua opinião..."
-            value={opinion}
-            onChange={handleInputChange}
-          ></textarea>
-          <button onClick={handleSendOpinion} className="send-btn">
-            Enviar
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </body>
 
   );
 };
