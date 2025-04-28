@@ -7,7 +7,7 @@
     <a href="https://github.com/CarlosAlbertoJunior" target="_blank">
       <img src="https://avatars.githubusercontent.com/u/173969178?v=4" width="100" height="100" style="display: block; margin: 0 auto;">
     </a>
-      <a href="[https://seu-link-aqui.com](https://github.com/Alzarus)" target="_blank">
+      <a href="https://github.com/Alzarus" target="_blank">
       <img src="https://avatars.githubusercontent.com/u/31142128?s=130&v=4" width="100" height="100" style="display: block; margin: 0 auto;">
     </a>
   </div>
