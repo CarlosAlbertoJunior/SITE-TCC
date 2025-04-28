@@ -1,8 +1,15 @@
-# React + Vite
+<h1>Trabalho de TCC</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>Site para informações sobre os custos e gastos dos orgãos publicos! </p>
 
-Currently, two official plugins are available:
+  <div style="text-align: center;">
+  <div style="display: inline-block; margin: 10px;">
+    <a href="https://github.com/CarlosAlbertoJunior" target="_blank">
+      <img src="https://avatars.githubusercontent.com/u/173969178?v=4" width="100" height="100" style="display: block; margin: 0 auto;">
+    </a>
+      <a href="[https://seu-link-aqui.com](https://github.com/Alzarus)" target="_blank">
+      <img src="https://avatars.githubusercontent.com/u/31142128?s=130&v=4" width="100" height="100" style="display: block; margin: 0 auto;">
+    </a>
+  </div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
